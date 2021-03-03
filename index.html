@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="descriptio" content="Processo seletivo para estágiario de Desenvolvedor SEO">
+    <meta name="author" content="Guilherme Bersi">
+    <meta name="keywords" content="Processo seletivo, estágio, estagiário, html, javascript, css ">
+    <meta name="robots" content="index,nofollow">
+
+    <!--ACIMA ALGUMA DAS TAGS PARA AJUDAR NA VISIBILIDADE DO SITE NOS MECANISMOS DE BUSCA-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
@@ -13,18 +20,19 @@
     <title>Rocky - WEB</title>
 </head>
 <body>
+    <div id="blog">
     <div class="page-1">
         <header>
             <div class="navbar">
                 <div class="logo"><a href="#"><img src="/imgs/logo.png" alt=""></a></div>
                 <div class="hamburguer active"></div>
                 <ul class="menu active ">
-                   <li><a href="#">SOBRE A ROCKY</a></li>
-                   <li><a href="#">SERVIÇOS</a></li>
-                   <li><a href="#">DIFERENCIAIS</a></li>
-                   <li><a href="#">TRABALHE CONOSCO</a></li>
-                   <li><a href="#">CONTATO</a></li>
-                   <li><a href="#">BLOG</a></li> 
+                   <li><a href="#sobre">SOBRE A ROCKY</a></li>
+                   <li><a href="#servicos">SERVIÇOS</a></li>
+                   <li><a href="#diferenciais">DIFERENCIAIS</a></li>
+                   <li><a href="#contato">TRABALHE CONOSCO</a></li>
+                   <li><a href="#contato">CONTATO</a></li>
+                   <li><a href="#blog">BLOG</a></li> 
                 </ul>
             </div>
         </header>
@@ -34,6 +42,12 @@
         <a href="#" id="button">ENTRE EM CONTATO</a>
         </div>
     </div>
+    </div>
+    
+    
+    <div class="background">
+        <div id="sobre">
+        <div class="page-2">
         <div class="sobre-title"><h1>SOBRE</h1></div>
         <div class="sobre">
             <p id="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -46,7 +60,10 @@
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
                 not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
+        </div>
+        </div>
 
+        <div id="servicos">
         <div class="servicos">
             <div class="serv-title"><h1>SERVIÇOS</h1></div>
             <div class="sections">
@@ -97,7 +114,9 @@
             </div>
             </div>
         </div>
+        </div>
 
+        <div id="diferenciais">
         <div class="diferenciais">
             <div class="dif-title"><h1>DIFERENCIAIS</h1></div>
             <div class="dif-sections">
@@ -139,46 +158,56 @@
             </div>
         </div>
      </div>
+    </div>
+    </div>
+
+    <div id="contato">
     <div class="page-3">
     <div class="info-side">
         <div class="social-media">
-            <a href="#"><img id="logo-ft" src="/imgs/logo.png" alt="Logo"></a>
-            <ul id="social-icons">
-                <li><a href="#"><img  id="facebook"src="/imgs/facebook.png" alt="Facebook"></a></li>
-                <li><a href="#"><img id="linkedin" src="/imgs/linkedin.png" alt="Lnkedin"></a></li>
-            </ul>
+                <a href="#"><img id="logo-ft" src="/imgs/logo.png" alt="Logo"></a>
+                <a href="#"><img  id="facebook" src="/imgs/facebook.png" alt="Facebook"></a>
+                <a href="#"><img id="linkedin" src="/imgs/linkedin.png" alt="Lnkedin"></a>
         </div>
         <div class="address">
             <div class="contatos1">
               <a class="contatos" href="mailto:contato@rocky.ag">contato@rocky.ag</a> | <a type="tel" href="">(15) 3321-1105</a>
             </div>
-              <p class="local"><img src="" alt=""> R. Romeu do Nascimento, 247 - Jardim Portal da Colina, Sorocaba - SP <br>
+              <p class="local"><img src="" alt="">R. Romeu do Nascimento, 247 - Jardim Portal da Colina, Sorocaba - SP <br>
         18047-410 - 2º andar</p>
         </div>
-        <div class="contato text">
+        <div class="contato-text">
          <p style="color:#fff">Lorem ipsum dolor sit amet, consetetur sadipscing <br>
             eltr, sed diam nonumt eirmod tempor invidunt ut <br>
             labore et dolore magna aliquyam erat, sed diam <br>
-            voluptua. At vero eos et accusam et justo duo dolores
+            voluptua. At vero eos et accusam et justo duo dolores <br>
             et ea rebum. Stet clita kasd. </p> 
 
          <p style="color:yellow ">Lorem ipsum dolor sit amet, consetetur sadipscing <br>
             eltr, sed diam nonumt eirmod tempor invidunt ut <br>
             labore et dolore magna aliquyam erat, sed diam <br>
-            voluptua. At vero eos et accusam et justo duo dolores 
+            voluptua. At vero eos et accusam et justo duo dolores <br>
             et ea rebum. Stet clita kasd. </p>
 
         <p style="color: rgb(92, 230, 230)">Lorem ipsum dolor sit amet, consetetur sadipscing <br>
             eltr, sed diam nonumt eirmod tempor invidunt ut <br>
             labore et dolore magna aliquyam erat, sed diam <br>
-            voluptua. At vero eos et accusam et justo duo dolores 
+            voluptua. At vero eos et accusam et justo duo dolores <br>
             et ea rebum. Stet clita kasd. </p>  
         </div>
     </div>
         <div class="quest">
         <div class="info-box">
+            <form class="formulario">
+                <input id="c1" type="text" placeholder="Nome">
+                <input id="c2" type="text" placeholder="E-mail">
+                <input id="c3" type="text" placeholder="Investimento mensal">
+                <input id="c4" type="text" placeholder="Mensagem">
+                <button id="b5" >ENVIAR MENSAGEM</button>
+            </form>
         </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

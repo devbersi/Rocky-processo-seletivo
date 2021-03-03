@@ -3,6 +3,9 @@ body {
     padding: 0;
     box-sizing: border-box;
 
+    width: 100vw;
+    height: 100vh;
+
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
 }
@@ -27,6 +30,14 @@ header {
     position: fixed;
     top: 0;
     z-index: 999;
+
+    transition: 0.5s ease-in-out;
+}
+header.active  {
+   background: #555; 
+   transition: 0.5s ease-in-out;
+
+   height: 115px;
 }
 .navbar {
     max-width: 1200px;
@@ -271,9 +282,9 @@ header {
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 378px){
     .page-1{
-        background-image: url("/imgs-mobile/s1 mobile.png") !important;
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s1\ mobile.png") !important;
         background-size: cover;
         
 
@@ -322,11 +333,13 @@ header {
         }
     
         #button {
-            margin-top: 180px !important;
+            margin-top: 120px !important;
     
             padding: 15px 7px !important;
     
             font-size: 12px !important;
+
+            
         }
     }
 
@@ -346,11 +359,15 @@ header {
 
 
 
+
 /*SEGUNDA PÁGINA BACKGROUND & SOBRE */
-.page-2 {
+.background{
     background-image: url("/imgs/bg.png");
-    background-size:cover;
+    background-size: cover;
     background-position: center;
+}
+
+.page-2 {
 
     width: 100%;
     height: 100vh;
@@ -365,13 +382,15 @@ header {
 
     
     font-weight: bolder;
+    font-size: 24px;
 }
 .sobre {
-    width: 600px;
-    height: 295px;
+    width: 580px;
+    height: 340px;
 
-    margin-left: 80px;
+    margin-left: 130px;
     padding: 5px 15px;
+    margin-top: 50px;
 
     box-shadow: 8px 8px 48px 0 rgba(0, 0, 0, 0.15);
 
@@ -384,6 +403,49 @@ header {
     font-weight: bolder;
 }
 
+/* RESPONSIVIDADE PAG SOBRE */
+@media (max-width: 924px) {
+    .sobre {
+       margin: auto;
+
+       width: 320px;
+       height: 490px;
+
+       font-size: 12px;
+
+       margin-top: 5px;
+       box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 0.15);
+    }
+     #p2, #p3{
+        padding-top: 30px;
+    }
+    .sobre-title {
+        padding: 0px 30px;
+        padding-top: 20px;
+    
+        font-weight: bolder;
+        font-size: 12px;
+
+        margin: auto;
+    }
+    .background {
+        background-image: url("/imgs/site-background.jpg");
+    }
+    .page-2{
+        width: 100vw !important;
+        height: 100vh !important;
+
+        margin: auto;
+        padding: 0%;
+    }
+} 
+
+
+
+
+
+
+
 
 
 
@@ -395,6 +457,9 @@ header {
     padding-top: 65px;
     padding-bottom: 10px;
     margin: auto;
+
+    width: 100%;
+    height: 100%;
 }
 .serv-title {
     padding-top: 25px;
@@ -465,9 +530,87 @@ header {
 
 
 
+/*RESPONSIVIDADE DOS SERVIÇOS */
+@media (max-width: 924px) {
+    .sections {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        text-align: center;
+    
+        padding: 15px 20px;
+    }
+    .serv-title {
+        padding: 0px 30px;
+        padding-top: 20px;
+    
+        font-weight: bolder;
+        font-size: 12px;
+
+        margin: auto;
+    }
+    .section1 {
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s3\ ft1.png");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+    }
+    .section2 {
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s3\ ft2.png");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+    }
+    .section3 {
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s3\ ft3.png");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+    }
+    .section1, .section2, .section3 {
+        color: #fff;
+    
+        width: 340px;
+        height: 240px;
+    
+        margin: 10px 5px;
+    
+        border-radius: 2%;
+
+        font-size: 9px;
+    }
+    .section1 h2 {
+        font-size: 16px;
+        color: yellow;
+    
+        padding: 0px 5px;
+    }
+    .section2 h2 {
+        font-size: 16px;
+        color: yellow;
+    
+    
+        padding: 0px 5px;
+    }
+    .section3 h2 {
+        font-size: 16px;
+        color: yellow;
+    
+        padding: 0px 10px;
+    }
+}
+
+
+
+
 
 
 /*DIFERENCIAIS */
+.diferenciais {
+    width: 100%;
+    height: 100%;
+}
 .dif-title{
     padding-top: 25px;
     padding-left: 80px;
@@ -485,6 +628,8 @@ header {
     text-align: center;
 
     margin: 10px 100px;
+    margin-bottom: 0px;
+    
 
 }
 .dif1 {
@@ -504,6 +649,9 @@ header {
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 2px;
+
 }
 .dif2{
     width: 150px;
@@ -540,15 +688,119 @@ header {
     background-blend-mode: multiply;
 }
 .dif1 img, .dif2 img, .dif3 img {
-    width: 95px;
-    height: 95px;
+    width: 90px;
+    height: 90px;
 
     padding-bottom: 25px;
+
+    margin: 0px 20px;
 }
 .dif1 p, .dif2 p, .dif3 p {
-    font-size: 14px;
+    font-size: 13px;
 
     color: white;
+}
+
+
+
+
+/*RESPONSIVIDADE DA PAG DIFERENCIAIS */
+@media (max-width: 924px) {
+    .dif-sections {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        text-align: center;
+    
+        
+    }
+    .dif1 img, .dif2 img, .dif3 img {
+        width: 90px;
+        height: 90px;
+    
+        padding-bottom: 10px;
+    
+        margin: 0px 20px;
+    }
+    .dif1 p, .dif2 p, .dif3 p {
+        font-size: 14px;
+    
+        color: white;
+    }
+    .dif-title {
+        padding: 0px 30px;
+        padding-top: 20px;
+    
+        font-weight: bolder;
+        font-size: 12px;
+
+        margin: auto;
+    }
+    
+    .dif1 {
+        width: 300px;
+        height: 270px;
+    
+        margin: 20px 10px;
+    
+        border-radius: 25px;
+    
+        text-align: center;
+    
+        padding: 55px 30px;
+        
+    
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s4\ ft1.png");
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    
+        box-shadow: rgba(0, 0, 0, 0.15) 2px;
+    
+    }
+    .dif2 {
+        width: 300px;
+        height: 270px;
+    
+        margin: 20px 10px;
+    
+        border-radius: 25px;
+    
+        text-align: center;
+    
+        padding: 55px 30px;
+        
+    
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s4\ ft2.png");
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    
+        box-shadow: rgba(0, 0, 0, 0.15) 2px;
+    
+    }
+    .dif3 {
+        width: 300px;
+        height: 270px;
+    
+        margin: 20px 10px;
+    
+        border-radius: 25px;
+    
+        text-align: center;
+    
+        padding: 55px 30px;
+        
+    
+        background-image: url("/imgs_mobile/Imagens_teste-master/mobile/s4\ ft3.png");
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    
+        box-shadow: rgba(0, 0, 0, 0.15) 2px;
+    
+    }
 }
 
 
@@ -558,7 +810,7 @@ header {
 
 
 .page-3 {
-    width: 1104px !important;
+    width: 100%;
     height: 100vh !important;
 
     background-color: #222;
@@ -570,119 +822,228 @@ header {
 
     border-width: 50px;
 
-    padding: 30px 100px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .social-media {
+    padding: 20px;
+    padding-left: 90px;
+    padding-bottom: 40px;
 
-   width: 500px;
-   height: 80px;
-
-   margin-top: 50px;
-
-   display: flex ;
-   align-items: center;
-   justify-content: space-evenly;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
 }
-.address {
-   width: 500px;
-   height: 100px;
-
-   margin-top: 30px;
-
-   color: #fff;
+.social-media img {
+    width: 130px;
+    height: 40px;
 }
-.contato.text {
-    width: 400px;
-    height: 400px;
-
-    padding: 0;
-
-    margin-top: 70px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-.quest {
-    width: 500px;
-    height: 600px;
-
-    padding: 0;
-    margin-top: 0;
-}
-.info-box {
-    background-color: purple;
-
-    width: 500px;
-    height: 600px;
-
-    margin-bottom: 40px;
-    margin-top: 0px;
-    margin-left: 80px;
-    float: left;
-
-}
-#logo-ft {
-    width: 145px;
+#facebook, #linkedin {
+    width: 35px;
     height: 35px;
 
-    justify-content: space-between;
+    padding-left: 30px;
 }
-.social-icons ul {
-    width: 100px;
-
-    display: flex;
-    align-items: center;
+#facebook {
+    padding-left: 100px;
 }
-
-#social-icons li, img {
-    list-style: none;
-
-    display: flex;
-    align-items: center;
-
-    flex-direction: row;
-
-    padding: 5px 20px;
-}
-#social-icons #facebook, #linkedin{
-    width: 40px;
-    height: 40px;
-
-    flex-direction: row;
-}
-.local {
-    font-size: 12px;
+.address {
+    padding-left: 90px;
+    padding-bottom: 0px;
 
     color: #fff;
-
-    padding-top: 10px;
-    padding-left: 20px;
-
 }
-.contatos1 {
+.contatos1{
+    width: 400px;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    padding-left: 20px;
+    justify-content: space-around;
 }
-.contatos1 a {
+.contatos1 a{
     text-decoration: none;
-    color: rgb(199, 194, 194);
 
-    font: 10px;
+    color: #fff;
+}
+.local {
+    text-decoration: none;
 
-    padding-top: 10px ;
+    color: #fff;
+    font-size: 8px;
 
+    width: 330px;
+
+    padding-top: 20px;
+}
+.contato-text {
+    padding-top: 30px;
+    padding-left: 90px;
+
+    font-size: 14px;
+}
+.quest {
+    background-color: #afafaf;
+
+    width: 400px;
+    height: 520px;
+
+    margin-top: 30px;
+    margin-right: 90px;
+}
+.info-box {
+    padding-top: 30px;
+}
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#c1, #c2, #c3 {
+    width: 350px;
+    height: 50px;
+
+    margin-bottom: 30px;
+    border-style: none;
+    padding-left: 10px;
+}
+#c4 {
+    width: 350px;
+    height: 150px;
+
+    margin-bottom: 20px;
+    border-style: none;
+    padding-left: 10px;
+}
+#b5 {
+    width: 367px;
+    height: 50px;
+    
+    background-color: #21c6d8;
+
+    border-style: none;
+
+    color: #fff;
+    font-weight: bolder;
 }
 
 
 
 
+/*RESPONSIVIDADE DA PAG CONTATOS */
+@media (max-width: 924px) {
+    .page-3 {
+        width: 100%;
+        height: 100vh !important;
+    
+        background-color: #222;
+        border-top-color: yellow;
+        border-bottom-color: yellow;
+    
+        border-top-style: solid;
+        border-bottom-style: solid;
+    
+        border-width: 20px;
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .social-media {
+        padding: 20px;
+        padding-left: 10px;
+        padding-bottom: 20px;
 
+        width: 330px;
+    
+        display: block;
+        justify-content: space-between;
+    }
+    .contato-text {
+        font-size: 8px;
 
+        padding-left: 15px;
+        padding-top: 10px;
 
-/* RESPONSIVIDADE DA SEÇAO SERVIÇOS E DIFERENCIAIS */
+        text-align: center;
+    }
+    .social-media img {
+        width: 130px;
+        height: 40px;
+    }
+    #linkedin {
+        width: 35px;
+        height: 35px;
+    
+        padding-left: 15px;
+    }
+    #facebook {
+        padding-left: 95px;
+    }
+    .contatos1{
+        width: 300px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 9px;
+    }
+    .address {
+        padding-left: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .local {
+        text-decoration: none;
+
+        color: #fff;
+        font-size: 8px;
+    
+        width: 300px;
+    
+        padding-top: 10px;
+    }
+    .quest {
+        background-color: #afafaf;
+    
+        width: 388px;
+        height: 280px;
+
+        margin: 0;
+
+    }
+    .info-box {
+        padding-top: 20px;
+    }
+    #c1, #c2, #c3 {
+        width: 300px;
+        height: 25px;
+    
+        margin-bottom: 20px;
+        border-style: none;
+        padding-left: 10px;
+    }
+    #c4 {
+        width: 300px;
+        height: 35px;
+    
+        margin-bottom: 20px;
+        border-style: none;
+        padding-left: 10px;
+    }
+    #b5 {
+        width: 300px;
+        height: 50px;
+        
+        background-color: #21c6d8;
+    
+        border-style: none;
+    
+        color: #fff;
+        font-weight: bolder;
+    }
+}
